@@ -1,0 +1,45 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>DETECTION D'AUTISME</title>
+  </head>
+  <body>
+        <div class="box">
+          <div class="page_text">
+            <div style="text-align:center;">
+                <h1>Detection de L'autism chez les enfants</h1>
+            </div>
+
+            <div class="container" style="justify-content:center;text-align:center;display:flex;">
+                <div class="right" >
+                      <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                            <input type="file" name="upload1" accept="image/*">
+                            <br>
+                            <button class="bttn" type="submit" name="cnnBtn">Detecter</button>
+                      </form>
+                </div>
+
+            </div>
+              <!--See Image Uploaded-->
+              <div class="row" style="justify-content:center;text-align:center;">
+                {% if classe %}
+                <div class="col-lg-4 col-md-6 col-sm-12 pb-4">
+                    {% if file_url %}
+                  <img src="{{ file_url }}" class="img-fluid" height="150px" width="150px">
+                    {% endif %}
+                    <p><b>{{classe}}</b></p>
+                  <br>
+                {% else %}
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+  </body>
+</html>

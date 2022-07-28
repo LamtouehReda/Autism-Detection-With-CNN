@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(pexels-mikhail-nilov-8654528.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box {
+    width: 70%;
+    height: 670px;
+    margin-top: 25px;
+    background-color: rgba(255, 255, 255, 0.2);  
+    backdrop-filter: blur(3px);
+    border-radius: 15px;
+}
+.box .page_text {
+    margin-left: 30px;
+    padding: 20px 25px 15px 15px;
+}
+.box .page_text h1 {
+    font-size: 80px;
+    font-family: 'Pacifico', cursive;
+    color: rgb(253, 176, 0);
+    margin-bottom: 50px;
+}
+.box .page_text p {
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 35px;
+    color: #fff;
+}
+.box .page_text .bttn {
+    display: inline-block;
+    padding: 13px 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.box .page_text .bttn {
+    align-items: center;
+    background-color: #FCFCFD;
+    border-radius: 15px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #67328A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 48px;
+    justify-content: center;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    transition: box-shadow .15s,transform .15s;
+    font-size: 18px;
+}
+
+.box .page_text .bttn:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.box .page_text .bttn:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+.box .page_text .bttn:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
+.row {
+    margin-top: 20px;
+}
